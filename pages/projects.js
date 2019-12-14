@@ -3,15 +3,15 @@ import Head from '../components/head'
 import Nav from '../components/nav'
 import Layout from '../components/layout'
 
-const About = () => {
+const Projects = () => {
   return (
     <div>
       <Layout>
-        <Head title="About" />
+        <Head title="Projects" />
         <Nav />
 
         <div>
-          <h1>About Me</h1>
+          <h1>Projects</h1>
           <p> Coming soon... </p>
         </div>
 
@@ -27,4 +27,4 @@ const About = () => {
   )
 }
 
-export default About
+export default Projects

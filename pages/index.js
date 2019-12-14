@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Head from '../components/head'
 import Nav from '../components/nav'
+import Layout from '../components/layout'
 
 const Home = () => {
   const [date, setDate] = useState(null);
@@ -18,46 +19,46 @@ const Home = () => {
   return (
     <div>
       <Head title="Home" />
-      <Nav />
+      <Layout>
+        <Nav />
 
-      <div className="hero">
-        <h1 className="title">Welcome to Next!</h1>
-        <p className="description">
-          To get started, edit the <code>pages/index.js</code> or <code>pages/api/date.js</code> files, then save to reload.
+        <div className="hero">
+          <h1 className="title">Florian Wahl</h1>
+          <p className="description">
+          Welcome to my website, referencing projects, photography, and miscellaneous experiments.
         </p>
 
-        <p className="row date">
-          The date is:&nbsp; {date
-            ? <span><b>{date.date}</b></span>
-            : <span className="loading"></span>}
-        </p>
+          <p className="row date">
+            The date is:&nbsp; {date
+              ? <span><b>{date.date}</b></span>
+              : <span className="loading"></span>}
+          </p>
 
-        <div className='row'>
-          <Link href='https://github.com/zeit/next.js#setup'>
-            <a className='card'>
-              <h3>Getting Started &rarr;</h3>
-              <p>Learn more about Next.js on GitHub and in their examples.</p>
-            </a>
-          </Link>
-          <Link href='https://github.com/zeit/next.js/tree/master/examples'>
-            <a className='card'>
-              <h3>Examples &rarr;</h3>
-              <p>Find other example boilerplates on the Next.js GitHub.</p>
-            </a>
-          </Link>
-          <Link href='https://github.com/zeit/next.js'>
-            <a className='card'>
-              <h3>Create Next App &rarr;</h3>
-              <p>Was this tool helpful? Let us know how we can improve it!</p>
-            </a>
-          </Link>
+          <div className='row'>
+            <Link href='/'>
+              <a className='card'>
+                <h3>Coming Soon...</h3>
+                <p>To be built.</p>
+              </a>
+            </Link>
+            <Link href='/'>
+              <a className='card'>
+                <h3>More Projects</h3>
+                <p>To be listed...</p>
+              </a>
+            </Link>
+            <Link href='https://github.com/florian-wahl/florian-wahl-website'>
+              <a className='card'>
+                <h3>This Website on GitHub &rarr;</h3>
+                <p>Find this website repo on GitHub.</p>
+              </a>
+            </Link>
+          </div>
         </div>
-      </div>
 
-      <style jsx>{`
+        <style jsx>{`
         .hero {
           width: 100%;
-          color: #333;
         }
         .title {
           margin: 0;
@@ -112,26 +113,24 @@ const Home = () => {
           width: 220px;
           text-align: left;
           text-decoration: none;
-          color: #434343;
           border: 1px solid #9b9b9b;
         }
         .card:hover {
-          border-color: #067df7;
+          border-color: #61a1a1;
         }
         .card h3 {
           margin: 0;
-          color: #067df7;
           font-size: 18px;
         }
         .card p {
           margin: 0;
           padding: 12px 0 0;
           font-size: 13px;
-          color: #333;
         }
       `}</style>
+      </Layout>
     </div>
   )
 }
 
-export default Home
+export default Home;
