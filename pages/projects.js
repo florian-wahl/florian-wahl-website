@@ -6,10 +6,8 @@ import Layout from '../components/layout'
 const Projects = () => {
   return (
     <div>
+      <Head title="Projects" />
       <Layout>
-        <Head title="Projects" />
-        <Nav />
-
         <div>
           <h1>Projects</h1>
           <p> Coming soon... </p>

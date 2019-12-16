@@ -3,9 +3,10 @@ import Link from 'next/link'
 
 const links = [
   { href: '/', label: 'Home' },
+  { href: 'resume', label: 'Resume'},
   { href: '/projects', label: 'Projects' },
-  { href: 'https://github.com/florian-wahl/florian-wahl-website', label: 'GitHub' },
-  { href: '/about', label: 'About Me' }
+  { href: '/photography', label: 'Photography' },
+  { href: '/about', label: 'About' }
 ].map(link => {
   link.key = `nav-link-${link.href}-${link.label}`
   return link

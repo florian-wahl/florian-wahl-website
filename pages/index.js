@@ -20,13 +20,11 @@ const Home = () => {
     <div>
       <Head title="Home" />
       <Layout>
-        <Nav />
-
         <div className="hero">
           <h1 className="title">Florian Wahl</h1>
           <p className="description">
-          Welcome to my website, referencing projects, photography, and miscellaneous experiments.
-        </p>
+            Welcome to my website, referencing projects, photography, and miscellaneous experiments.
+          </p>
 
           <p className="row date">
             The date is:&nbsp; {date

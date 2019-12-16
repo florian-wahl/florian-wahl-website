@@ -6,9 +6,8 @@ import Layout from '../components/layout'
 const About = () => {
   return (
     <div>
+      <Head title="About" />
       <Layout>
-        <Head title="About" />
-        <Nav />
 
         <div>
           <h1>About Me</h1>
