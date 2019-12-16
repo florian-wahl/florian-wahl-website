@@ -1,56 +1,33 @@
-import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Head from '../components/head'
-import Nav from '../components/nav'
 import Layout from '../components/layout'
 
 const Home = () => {
-  const [date, setDate] = useState(null);
-
-  useEffect(() => {
-    async function getDate() {
-      const res = await fetch('/api/date');
-      const newDate = await res.json();
-      setDate(newDate);
-    }
-    getDate();
-  }, []);
-
   return (
     <div>
-      <Head title="Home" />
-      <Layout>
+      <Layout title="Home">
         <div className="hero">
           <h1 className="title">Florian Wahl</h1>
           <p className="description">
             Welcome to my website, referencing projects, photography, and miscellaneous experiments.
           </p>
 
-          <p className="row date">
-            The date is:&nbsp; {date
-              ? <span><b>{date.date}</b></span>
-              : <span className="loading"></span>}
-          </p>
-
           <div className='row'>
-            <Link href='/'>
+            <Link href='/resume'>
               <a className='card'>
-                <h3>Coming Soon...</h3>
-                <p>To be built.</p>
+                <h3>My Resume</h3>
+                <p>Online version of my resume.</p>
               </a>
             </Link>
-            <Link href='/'>
+            <Link href='/projects'>
               <a className='card'>
                 <h3>More Projects</h3>
-                <p>To be listed...</p>
+                <p>Currated list of relevant projects.</p>
               </a>
             </Link>
-            <Link href='https://github.com/florian-wahl/florian-wahl-website'>
-              <a className='card'>
-                <h3>This Website on GitHub &rarr;</h3>
-                <p>Find this website repo on GitHub.</p>
-              </a>
-            </Link>
+            <a className='card' href='https://github.com/florian-wahl/florian-wahl-website'>
+              <h3>This Website on GitHub &rarr;</h3>
+              <p>Find this website repo on GitHub.</p>
+            </a>
           </div>
         </div>
 
@@ -58,14 +35,7 @@ const Home = () => {
         .hero {
           width: 100%;
         }
-        .title {
-          margin: 0;
-          width: 100%;
-          padding-top: 80px;
-          line-height: 1.15;
-          font-size: 48px;
-        }
-        .title,
+
         .description {
           text-align: center;
         }
@@ -108,6 +78,7 @@ const Home = () => {
         }
         .card {
           padding: 18px 18px 24px;
+          margin: 1px 5px;
           width: 220px;
           text-align: left;
           text-decoration: none;
